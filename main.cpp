@@ -26,12 +26,24 @@ public:
  return (width * height)/2;
  }
 };
+class Rectangle: public Shape
+{
+public:
+ int getArea()
+ {
+ return (width * height);
+ }
+};
 int main(void)
 {
  Triangle Tri;
+ Rectangle Rect;
  Tri.setWidth(5);
  Tri.setHeight(7);
+ Rect.setHeight(4);
+ Rect.setWidth(6);
  // Print the area of the object.
  cout << "Total Triangle area: " << Tri.getArea() << endl;
+ cout << "Total Rectangle Area: "<< Rect.getArea() <<endl;
  return 0;
 }
